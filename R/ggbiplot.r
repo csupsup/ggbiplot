@@ -206,7 +206,7 @@ ggbiplot <- function(pcobj, choices = 1:2, scale = 1, pc.biplot = TRUE,
     geom_text(data = df.v, 
               aes(label = varname, x = xvar, y = yvar, 
                   angle = angle, hjust = hjust), 
-              color = 'darkred', size = varname.size)
+              color = 'black', size = varname.size)
   }
   # Change the name of the legend for groups
   # if(!is.null(groups)) {
