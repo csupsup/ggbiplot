@@ -52,7 +52,7 @@ ggbiplot <- function(pcobj, choices = 1:2, scale = 1, pc.biplot = TRUE,
                       var.axes = TRUE, 
                       circle = FALSE, circle.prob = 0.69, 
                       varname.size = 3, varname.adjust = 1.5, 
-                      varname.abbrev = FALSE, ...)
+                      varname.abbrev = FALSE, color = muted("red"), linetype = "solid", alpha_arrow = 1, ...)
 {
   library(ggplot2)
   library(plyr)
@@ -162,7 +162,7 @@ ggbiplot <- function(pcobj, choices = 1:2, scale = 1, pc.biplot = TRUE,
       geom_segment(data = df.v,
                    aes(x = 0, y = 0, xend = xvar, yend = yvar),
                    arrow = arrow(length = unit(1/2, 'picas')), 
-                   color = muted('gray0'))
+                   color = color, linetype = linetype, alpha = alpha_arrow)
   }
 
   # Draw either labels or points
