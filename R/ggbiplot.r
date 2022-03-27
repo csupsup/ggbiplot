@@ -162,7 +162,7 @@ ggbiplot <- function(pcobj, choices = 1:2, scale = 1, pc.biplot = TRUE,
       geom_segment(data = df.v,
                    aes(x = 0, y = 0, xend = xvar, yend = yvar),
                    arrow = arrow(length = unit(1/2, 'picas')), 
-                   color = muted('gray0'))
+                   color = '#000000')
   }
 
   # Draw either labels or points
